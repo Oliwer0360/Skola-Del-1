@@ -4,9 +4,6 @@ public class Skola {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        //Avsluta programmet
-        boolean avsluta=frågaBytaNamn();
-
             //Studenter objekt + Variabler
             Studenter s1 = new Studenter();
             s1.namn = "Oliwer";
@@ -53,10 +50,10 @@ public class Skola {
 
             //Vaktmästare objekt + Variabler
             Vaktmästare v1 = new Vaktmästare();
-            v1.namn = "Tobias";
-            v1.ålder = 49;
+            v1.namn = "Sixten";
+            v1.ålder = 6;
             v1.avdelning = "Idrottshallen";
-            v1.lön = 32000;
+            v1.lön = 14000;
             v1.talId = 1;
 
             Vaktmästare v2 = new Vaktmästare();
@@ -73,6 +70,9 @@ public class Skola {
             v3.lön = 35000;
             v3.talId = 3;
 
+        //Avsluta programmet
+        boolean avsluta=false;
+
         while (!avsluta) {
             //Presentera(Sout)
             s1.presentera();
@@ -86,26 +86,28 @@ public class Skola {
             v1.presentera();
             v2.presentera();
             v3.presentera();
+
+            avsluta = frågaBytaNamn(input);
         }
 
     }
 
-    public static void frågaBytaNamn(Scanner input){
+    public static boolean frågaBytaNamn(Scanner input){
         System.out.println("\nVill du byta namn på någon student/anställd eller avsluta programmet? J/N.");
 
         if (input.hasNextLine()){
             String avsluta = input.nextLine();
-            input.nextLine();
 
-            if (avsluta.equalsIgnoreCase("y")){
+            if (avsluta.equalsIgnoreCase("j")){
 
             } else if (avsluta.equalsIgnoreCase("n")) {
-
+                return true;
             } else {
                 System.out.println("Ogiltigt svar! Försök igen.");
 
             }
         }
+        return false;
     }
 
 }
