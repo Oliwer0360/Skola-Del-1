@@ -87,27 +87,60 @@ public class Skola {
             v2.presentera();
             v3.presentera();
 
-            avsluta = frågaBytaNamn(input);
+            avsluta = frågaBytaNamn(input, s1);
         }
 
     }
 
-    public static boolean frågaBytaNamn(Scanner input){
+    public static boolean frågaBytaNamn(Scanner input, Studenter s1){
         System.out.println("\nVill du byta namn på någon student/anställd eller avsluta programmet? J/N.");
 
-        if (input.hasNextLine()){
-            String avsluta = input.nextLine();
+        String avsluta = input.nextLine();
 
-            if (avsluta.equalsIgnoreCase("j")){
+        if (avsluta.equalsIgnoreCase("j")){
 
-            } else if (avsluta.equalsIgnoreCase("n")) {
-                return true;
-            } else {
-                System.out.println("Ogiltigt svar! Försök igen.");
+            //Variabler för nya namn
+            String nyttStudentNamn;
+            String nyttLärareNamn;
+            String nyttVaktmästareNamn;
+
+            String val = input.nextLine();
+            switch (val){
+                case "s1":
+                    System.out.println("Nytt namn för student:");
+                    nyttStudentNamn = input.nextLine();
+                    s1.bytaNamn(nyttStudentNamn);
+
+                case "s2":
+                    System.out.println("Nytt namn för student:");
+                    nyttStudentNamn = input.nextLine();
+                    s1.bytaNamn(nyttStudentNamn);
+
+                case "s3":
+                    System.out.println("Nytt namn för student:");
+                    nyttStudentNamn = input.nextLine();
+                    s1.bytaNamn(nyttStudentNamn);
+
+                case "l1":
+                    System.out.println("Nytt namn för student:");
+                    nyttLärareNamn = input.nextLine();
+                    s1.bytaNamn(nyttLärareNamn);
+
+                case "v2":
+                    System.out.println("Nytt namn för student:");
+                    nyttLärareNamn = input.nextLine();
+                    s1.bytaNamn(nyttLärareNamn);
 
             }
+
+        } else if (avsluta.equalsIgnoreCase("n")) {
+            return true;
+        } else {
+            System.out.println("Ogiltigt svar! Försök igen.");
         }
         return false;
     }
+
+
 
 }
