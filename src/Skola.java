@@ -4,6 +4,8 @@ public class Skola {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
+        //Skicka objekt till frågaBytaNamn metoden
+
             //Studenter objekt + Variabler
             Studenter s1 = new Studenter();
             s1.namn = "Oliwer";
@@ -87,17 +89,19 @@ public class Skola {
             v2.presentera();
             v3.presentera();
 
-            avsluta = frågaBytaNamn(input, s1);
+            avsluta = frågaBytaNamn(input, s1, s2, s3, l1, l2, l3, v1, v2, v3);
         }
 
     }
 
-    public static boolean frågaBytaNamn(Scanner input, Studenter s1){
+    public static boolean frågaBytaNamn(Scanner input, Studenter s1, Studenter s2, Studenter s3, Lärare l1, Lärare l2, Lärare l3, Vaktmästare v1, Vaktmästare v2, Vaktmästare v3){
         System.out.println("\nVill du byta namn på någon student/anställd eller avsluta programmet? J/N.");
 
         String avsluta = input.nextLine();
 
         if (avsluta.equalsIgnoreCase("j")){
+
+            System.out.println("Vem vill du byta namn på? s1, l1, v1 osv:");
 
             //Variabler för nya namn
             String nyttStudentNamn;
@@ -110,26 +114,55 @@ public class Skola {
                     System.out.println("Nytt namn för student:");
                     nyttStudentNamn = input.nextLine();
                     s1.bytaNamn(nyttStudentNamn);
+                    break;
 
                 case "s2":
                     System.out.println("Nytt namn för student:");
                     nyttStudentNamn = input.nextLine();
-                    s1.bytaNamn(nyttStudentNamn);
+                    s2.bytaNamn(nyttStudentNamn);
+                    break;
 
                 case "s3":
                     System.out.println("Nytt namn för student:");
                     nyttStudentNamn = input.nextLine();
-                    s1.bytaNamn(nyttStudentNamn);
+                    s3.bytaNamn(nyttStudentNamn);
+                    break;
 
                 case "l1":
                     System.out.println("Nytt namn för student:");
                     nyttLärareNamn = input.nextLine();
-                    s1.bytaNamn(nyttLärareNamn);
+                    l1.bytaNamn(nyttLärareNamn);
+                    break;
+
+                case "l2":
+                    System.out.println("Nytt namn för student:");
+                    nyttLärareNamn = input.nextLine();
+                    l2.bytaNamn(nyttLärareNamn);
+                    break;
+
+                case "l3":
+                    System.out.println("Nytt namn för student:");
+                    nyttLärareNamn = input.nextLine();
+                    l3.bytaNamn(nyttLärareNamn);
+                    break;
+
+                case "v1":
+                    System.out.println("Nytt namn för student:");
+                    nyttVaktmästareNamn = input.nextLine();
+                    v1.bytaNamn(nyttVaktmästareNamn);
+                    break;
 
                 case "v2":
                     System.out.println("Nytt namn för student:");
-                    nyttLärareNamn = input.nextLine();
-                    s1.bytaNamn(nyttLärareNamn);
+                    nyttVaktmästareNamn = input.nextLine();
+                    v2.bytaNamn(nyttVaktmästareNamn);
+                    break;
+
+                case "v3":
+                    System.out.println("Nytt namn för student:");
+                    nyttVaktmästareNamn = input.nextLine();
+                    v3.bytaNamn(nyttVaktmästareNamn);
+                    break;
 
             }
 
