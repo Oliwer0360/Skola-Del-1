@@ -129,37 +129,37 @@ public class Skola {
                     break;
 
                 case "l1":
-                    System.out.println("Nytt namn för student:");
+                    System.out.println("Nytt namn för lärare:");
                     nyttLärareNamn = input.nextLine();
                     l1.bytaNamn(nyttLärareNamn);
                     break;
 
                 case "l2":
-                    System.out.println("Nytt namn för student:");
+                    System.out.println("Nytt namn för lärare:");
                     nyttLärareNamn = input.nextLine();
                     l2.bytaNamn(nyttLärareNamn);
                     break;
 
                 case "l3":
-                    System.out.println("Nytt namn för student:");
+                    System.out.println("Nytt namn för lärare:");
                     nyttLärareNamn = input.nextLine();
                     l3.bytaNamn(nyttLärareNamn);
                     break;
 
                 case "v1":
-                    System.out.println("Nytt namn för student:");
+                    System.out.println("Nytt namn för vaktmästare:");
                     nyttVaktmästareNamn = input.nextLine();
                     v1.bytaNamn(nyttVaktmästareNamn);
                     break;
 
                 case "v2":
-                    System.out.println("Nytt namn för student:");
+                    System.out.println("Nytt namn för vaktmästare:");
                     nyttVaktmästareNamn = input.nextLine();
                     v2.bytaNamn(nyttVaktmästareNamn);
                     break;
 
                 case "v3":
-                    System.out.println("Nytt namn för student:");
+                    System.out.println("Nytt namn för vaktmästare:");
                     nyttVaktmästareNamn = input.nextLine();
                     v3.bytaNamn(nyttVaktmästareNamn);
                     break;
